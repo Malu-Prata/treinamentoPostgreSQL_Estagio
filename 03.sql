@@ -121,3 +121,18 @@ where (coddepartamento=01 or coddepartamento=03)
 order by nome asc;
 
 9. 
+select nome as Funcionario, salario as Salario_Mes
+from funcionario 
+where salario>=900
+and (coddepartamento =  07 or coddepartamento = 10); //os parentêses são importantes, sem eles a ordem de precedência fica errada 
+
+
+10. 
+select nome, dtcontratacao 
+from funcionario 
+where extract(year from dtcontratacao) = 2004 ;
+
+11.
+select nome, cargo 
+from funcionario 
+where codgerente is null;
